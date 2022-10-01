@@ -15,7 +15,7 @@
         </style>
     </head>
     <body class="antialiased">
-       <h2> Welcome {{name}}</h2>
-       I'm {{$age}} years old
+       <h2> Welcome {{ $name }}</h2>
+       I'm {{ $age }} years old
     </body>
 </html>
