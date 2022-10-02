@@ -10,14 +10,15 @@ use App\Models\Cars;
 
 class CarsController extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests, Controllers;
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public static function index(){
-        $cars = Car::all();
+        $cars = Cars::all();
         return view('cars', compact('cars'));
     }
     public function show($id) {
-        $car = Car::find($id);
+        $car = Cars::find($id);
         return view('cars:id', compact('car'));
     }
+
 }
