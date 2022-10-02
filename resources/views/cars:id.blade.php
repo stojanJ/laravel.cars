@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Cars</title>
+        <title>car {{$post->title}}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,13 +15,6 @@
         </style>
     </head>
     <body class="antialiased">
-       <h2>Cars</h2>
-       @foreach ($cars as $car)
-       <li> 
-        <a href="{{ route('single-car', [ 'id' => $car->id ]) }}">
-            {{ $car->title }}
-        </a>
-    </li>
-       @endforeach
+       <h2> {{$post->title}}</h2>
     </body>
 </html>
