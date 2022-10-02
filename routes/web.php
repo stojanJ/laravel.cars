@@ -19,9 +19,9 @@ Route::get('/', function () {
   return view('welcome',compact('name'), compact('age') );
 });
 
-Route::get('/about', function () {
+Route::get('/layouts/about', function () {
     return view('about');
 });
 
-Route::get('/cars',[CarsController::class, 'index']);
-Route::get('/cars/{id}',[CarsController::class, 'show'])->name('single-car');
+Route::get('/layouts/cars',[CarsController::class, 'index']);
+Route::get('/layouts/cars/{id}',[CarsController::class, 'show'])->name('single-car');

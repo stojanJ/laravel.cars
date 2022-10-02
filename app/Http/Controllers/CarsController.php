@@ -14,11 +14,11 @@ class CarsController extends BaseController
 
     public static function index(){
         $cars = Cars::all();
-        return view('cars', compact('cars'));
+        return view('layouts.cars', compact('cars'));
     }
     public function show($id) {
         $car = Cars::find($id);
-        return view('cars:id', compact('car'));
+        return view('layouts.cars:id', compact('car'));
     }
 
 }
